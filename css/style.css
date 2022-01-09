@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-size: 25px 25px;
+  background-image: linear-gradient(
+      to right,
+      rgb(0, 37, 74) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(0, 36, 72) 1px, transparent 1px);
+  overflow: hidden;
+}
+
+/* ------------------------General------------------------- */
+
+/* Navigation */
+.nav {
+  padding: 2rem 1rem 1.5rem 4rem;
+  position: fixed;
+  /* background: aquamarine; */
+}
+.circnav {
+  /* background: blueviolet; */
+  display: grid;
+  padding-left: 4rem;
+  grid-template-columns: repeat(4, 2.2rem);
+  align-content: end;
+}
+.circle {
+  height: 2rem;
+  width: 2rem;
+  background: lightskyblue;
+  border-radius: 60%;
+}
+
+#circle1 {
+  animation: circle-in 0.3s linear forwards;
+}
+#active {
+  background: aliceblue;
+}
+
+#circle2 {
+  animation: circle-in 0.6s linear forwards;
+}
+#circle3 {
+  animation: circle-in 0.9s linear forwards;
+}
+#circle4 {
+  animation: circle-in 1.2s linear forwards;
+}
+
+.heading {
+  /* background: brown; */
+}
+.heading h1 {
+  font-size: 4.5rem;
+  color: aliceblue;
+}
+.subheading {
+  /* background: burlywood; */
+}
+.subheading {
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40% 60%;
+  grid-auto-rows: minmax(40% auto);
+  padding: 1rem 2rem 2rem 4rem;
+  /* background: forestgreen; */
+}
+/* ------------------------Containers------------------------- */
+.home,
+.projects,
+.about,
+.contact {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 98, 255),
+    rgba(0, 128, 255),
+    rgba(30, 144, 255, 0.8)
+  );
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 15% 80% 15%;
+  row-gap: 0.5rem;
+}
+
+.about,
+.contact {
+  background-image: linear-gradient(
+    to top right,
+    rgb(79, 146, 255),
+    rgb(122, 188, 255),
+    rgba(101, 178, 255, 0.8)
+  );
+}
+
+/* ------------------------Media Queries------------------------- */
+
+@media screen and (max-width: 560px), screen and (max-height: 560px) {
+  .nav {
+    padding: 0.5rem 1rem 1.5rem 2.5rem;
+  }
+
+  .circnav {
+    padding-left: 2.5rem;
+  }
+  .container {
+    grid-template-rows: 40% 50%;
+    grid-auto-rows: minmax(30% auto);
+    padding: 1rem 2rem 2rem 2.5rem;
+  }
+  .heading h1 {
+    font-size: 3rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+
+@keyframes circle-in {
+  0% {
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(110%);
+  }
+  65% {
+    transform: scale(120%);
+  }
+  75% {
+    transform: scale(130%);
+  }
+  85% {
+    transform: scale(120%);
+  }
+  95% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+    /* background: aliceblue; */
+  }
+}
