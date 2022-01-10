@@ -14,7 +14,7 @@ body {
       transparent 1px
     ),
     linear-gradient(to bottom, rgb(0, 36, 72) 1px, transparent 1px);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* ------------------------General------------------------- */
@@ -39,47 +39,32 @@ body {
   border-radius: 60%;
 }
 
-#circle1 {
-  animation: circle-in 0.3s linear forwards;
-}
 #active {
   background: aliceblue;
 }
+#circle1 {
+}
 
 #circle2 {
-  animation: circle-in 0.6s linear forwards;
 }
 #circle3 {
-  animation: circle-in 0.9s linear forwards;
 }
 #circle4 {
-  animation: circle-in 1.2s linear forwards;
 }
-
 .heading {
-  /* background: brown; */
+  background: brown;
 }
 .heading h1 {
   font-size: 4.5rem;
   color: aliceblue;
 }
 .subheading {
-  /* background: burlywood; */
-}
-.subheading {
+  font-family: monospace;
   font-size: 1.5rem;
   color: aliceblue;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 40% 60%;
-  grid-auto-rows: minmax(40% auto);
-  padding: 1rem 2rem 2rem 4rem;
-  /* background: forestgreen; */
-}
-/* ------------------------Containers------------------------- */
+/* ------------------------Pages------------------------- */
 .home,
 .projects,
 .about,
@@ -102,10 +87,72 @@ body {
 .contact {
   background-image: linear-gradient(
     to top right,
-    rgb(79, 146, 255),
+    rgb(39, 122, 255),
     rgb(122, 188, 255),
     rgba(101, 178, 255, 0.8)
   );
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-rows: 50% 50%;
+  padding: 1rem 4rem 2rem 4rem;
+  background: forestgreen;
+}
+
+/* ------------------------About Page------------------------- */
+.aboutcontent {
+  display: grid;
+  background: crimson;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: repeat(4, 25%);
+  grid-gap: 0.5rem;
+  padding: 1rem;
+}
+.progress {
+  background: darkblue;
+  text-align: center;
+  padding: 0.5rem;
+  color: rgb(234, 245, 255);
+}
+.on {
+  height: 0.8rem;
+  width: 0.8rem;
+  background: rgb(0, 79, 236);
+  display: inline-block;
+  border-radius: 50%;
+}
+#on-1 {
+  animation: turn-on 3s ease-in infinite;
+}
+#on-2 {
+  animation: turn-on 3.5s ease-in infinite;
+}
+#on-3 {
+  animation: turn-on 4s ease-in infinite;
+}
+#on-4 {
+  animation: turn-on 4.5s ease-in infinite;
+}
+#on-5 {
+  animation: turn-on 5s ease-in infinite;
+}
+.off {
+  height: 0.8rem;
+  width: 0.8rem;
+  background: aliceblue;
+  display: inline-block;
+}
+/* ------------------------Projects Page------------------------- */
+.projectcontent {
+  display: grid;
+  background: crimson;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: repeat(2, 50%);
+  grid-gap: 0.5rem;
+  padding: 1rem;
 }
 
 /* ------------------------Media Queries------------------------- */
@@ -119,42 +166,32 @@ body {
     padding-left: 2.5rem;
   }
   .container {
-    grid-template-rows: 40% 50%;
-    grid-auto-rows: minmax(30% auto);
+    grid-template-rows: 20% 20%;
+    grid-auto-rows: minmax(10% auto);
     padding: 1rem 2rem 2rem 2.5rem;
   }
   .heading h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
   .subheading {
     font-size: 1rem;
   }
+  /* About Page */
+  .content {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 25%);
+  }
 }
 
 /* Animations */
-
-@keyframes circle-in {
-  0% {
-    transform: scale(100%);
+@keyframes turn-on {
+  30% {
+    transform: scale(50%);
   }
-
   50% {
-    transform: scale(110%);
-  }
-  65% {
-    transform: scale(120%);
-  }
-  75% {
-    transform: scale(130%);
-  }
-  85% {
-    transform: scale(120%);
-  }
-  95% {
-    transform: scale(110%);
+    transform: scale(70%);
   }
   100% {
     transform: scale(100%);
-    /* background: aliceblue; */
   }
 }
