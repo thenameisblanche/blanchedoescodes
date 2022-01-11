@@ -71,12 +71,7 @@ body {
   font-size: 1.5rem;
   color: aliceblue;
 }
-.maincontent {
-  background: darkblue;
-  text-align: center;
-  padding: 0.5rem;
-  color: rgb(234, 245, 255);
-}
+
 /* ------------------------Pages------------------------- */
 .home,
 .projects,
@@ -111,9 +106,26 @@ body {
   display: grid;
   /* background: crimson; */
   grid-template-columns: repeat(3, 32%);
-  grid-template-rows: repeat(4, 25%);
+  grid-template-rows: repeat(2, 25%), 10%;
   grid-gap: 0.5rem;
   padding: 1rem;
+}
+.logoimg {
+  width: 25%;
+  height: auto;
+  /* background: blanchedalmond; */
+}
+.creative {
+  /* background: chartreuse; */
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.abouts {
+  background: darkblue;
+  text-align: center;
+  padding: 0.5rem;
+  color: rgb(234, 245, 255);
 }
 .on {
   height: 0.8rem;
@@ -143,25 +155,39 @@ body {
   background: aliceblue;
   display: inline-block;
 }
+
 /* ------------------------Projects Page------------------------- */
 .projectcontent {
   display: grid;
   /* background: crimson; */
-  grid-template-columns: repeat(3, 32%);
-  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: 60%;
   grid-gap: 0.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  justify-content: center;
+}
+.bullets {
+  line-height: 0.5rem;
+  font-size: 2rem;
 }
 #showp1,
 #showp2,
 #showp3,
 #showp4,
 #showp5 {
-  background: forestgreen;
+  background: cyan;
+  font-weight: bold;
+  color: rgb(151, 206, 255);
+  padding: 0.5rem;
+  border: 0.2rem rgb(179, 219, 255) solid;
+  /* outline: 0.2rem aliceblue solid; */
+  /* outline-offset: -0.8rem; */
 }
 .hiddenp {
   background: dodgerblue;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 70% 30%;
+  color: aliceblue;
+  padding: 1rem;
 }
 #hiddenp1,
 #hiddenp2,
@@ -169,6 +195,51 @@ body {
 #hiddenp4,
 #hiddenp5 {
   display: none;
+}
+
+.projectimg {
+  width: 10rem;
+  height: auto;
+}
+
+/* ------------------------Contact Page Page------------------------- */
+.contactcontent {
+  display: grid;
+  /* background: crimson; */
+  grid-template-columns: repeat(5, 15%);
+  /* justify-content: center; */
+
+  grid-gap: -3%;
+  /* padding: 1rem; */
+}
+
+.contacts {
+  /* background: cornflowerblue; */
+  /* text-align: center; */
+}
+.contactlogo {
+  width: 100%;
+  height: auto;
+  /* background: blanchedalmond; */
+}
+/* ------------------------Creative Page Page------------------------- */
+.creativecontainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  background: forestgreen;
+  padding: 1rem;
+}
+.creativeheading {
+  background: cornflowerblue;
+}
+.creativecontent {
+  background: chartreuse;
+  padding: 1rem;
+}
+.creativeimg {
+  height: 30%;
+  width: auto;
 }
 /* ------------------------Media Queries------------------------- */
 

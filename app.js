@@ -32,28 +32,22 @@ showp5.addEventListener('click', () => {
 
 hiddenp1.onmouseout = () => {
   hiddenp1.style.display = 'none';
-  // hiddenp1.previousElementSibling.style.display = 'grid';
   showp1.parentElement.style.display = 'grid';
 };
 hiddenp2.onmouseout = () => {
   hiddenp2.style.display = 'none';
-  // hiddenp1.previousElementSibling.style.display = 'grid';
   showp2.parentElement.style.display = 'grid';
 };
 hiddenp3.onmouseout = () => {
   hiddenp3.style.display = 'none';
-  // hiddenp1.previousElementSibling.style.display = 'grid';
   showp3.parentElement.style.display = 'grid';
 };
 hiddenp4.onmouseout = () => {
   hiddenp4.style.display = 'none';
-  // hiddenp1.previousElementSibling.style.display = 'grid';
+
   showp4.parentElement.style.display = 'grid';
 };
 hiddenp5.onmouseout = () => {
   hiddenp5.style.display = 'none';
-  // hiddenp1.previousElementSibling.style.display = 'grid';
   showp5.parentElement.style.display = 'grid';
 };
-
-// const projectcontent = document.getElementsByClassName('projectcontent');
