@@ -17,7 +17,7 @@
     rel="stylesheet"
   </head>
   <body>
-    <!-- Home -->
+    <!-- Page Home -->
     <div class="home" id="home">
       <div class="nav">
         <a href="#">logo</a>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <!-- About-->
+    <!-- Page About-->
     <div class="about" id="about">
       <div class="circnav">
         <div
@@ -97,7 +97,7 @@
           <span class="subheading"></span>
         </div>
         <div class="aboutcontent">
-          <div class="progress">
+          <div class="maincontent">
             Html and Css <br />
             <div class="on" id="on-1"></div>
             <div class="on" id="on-2"></div>
@@ -105,7 +105,7 @@
             <div class="off" id="of-4"></div>
             <div class="off" id="of-5"></div>
           </div>
-          <div class="progress">
+          <div class="maincontent">
             Javascript <br />
             <div class="on" id="on-1"></div>
             <div class="off" id="of-2"></div>
@@ -113,7 +113,7 @@
             <div class="off" id="of-4"></div>
             <div class="off" id="of-5"></div>
           </div>
-          <div class="progress">
+          <div class="maincontent">
             React.js<br />
             <div class="on" id="on-1"></div>
             <div class="off" id="of-2"></div>
@@ -121,7 +121,7 @@
             <div class="off" id="of-4"></div>
             <div class="off" id="of-5"></div>
           </div>
-          <div class="progress">
+          <div class="maincontent">
             Php<br />
             <div class="on" id="on-1"></div>
             <div class="on" id="on-2"></div>
@@ -129,7 +129,7 @@
             <div class="off" id="of-4"></div>
             <div class="off" id="of-5"></div>
           </div>
-          <div class="progress">
+          <div class="maincontent">
             Laravel<br />
             <div class="on" id="on-1"></div>
             <div class="on" id="on-2"></div>
@@ -137,7 +137,7 @@
             <div class="off" id="of-4"></div>
             <div class="off" id="of-5"></div>
           </div>
-          <div class="progress">
+          <div class="maincontent">
             MySQL<br />
             <div class="on" id="on-1"></div>
             <div class="on" id="on-2"></div>
@@ -149,7 +149,7 @@
       </div>
     </div>
 
-    <!-- Projects-->
+    <!--Page Projects-->
     <div class="projects" id="projects">
       <div class="circnav">
         <div
@@ -174,6 +174,7 @@
           style="cursor: pointer"
         ></div>
       </div>
+      <!-- Content Project -->
       <div class="container">
         <div class="heading">
           <h1>
@@ -184,36 +185,49 @@
           <span class="subheading"> It's a privilege to work with you:> </span>
         </div>
          <div class="projectcontent">
-          <div class="progress">
-            Project 1<br />
-          
-          </div>
-          <div class="progress">
+          <div class="maincontent" id="showp1">
+         </div>
+          <div class="maincontent" id="showp2">
             Project 2 <br />
            
           </div>
-          <div class="progress">
+          <div class="maincontent" id="showp3">
            Project 3
           
           </div>
-          <div class="progress">
+          <div class="maincontent" id="showp4">
             Project 4<br />
           
           </div>
-          <div class="progress">
+          <div class="maincontent" id="showp5">
             Project 5<br />
          
           </div>
-          <div class="progress">
-            Project 6<br />
-  
-          </div>
         </div>
+        <!-- Hidden Projects -->
+         <div  class="hiddenp" id="hiddenp1">
+            <div>Bello</div>
+            <div>Bello</div>
+          </div>
+         <div  class="hiddenp" id="hiddenp2">
+            <div><p>Is this previous</p></div>
+          </div>
+         <div  class="hiddenp" id="hiddenp3">
+            <div><p>Is this previous</p></div>
+          </div>
+         <div  class="hiddenp" id="hiddenp4">
+            <div><p>Is this previous</p></div>
+          </div>
+         <div  class="hiddenp" id="hiddenp5">
+            <div><p>Is this previous</p></div>
+          </div>
       </div>
+
+      
       
     </div>
 
-    <!-- Contact-->
+    <!--Page Contact-->
     <div class="contact" id="contact">
       <div class="circnav">
         <div
@@ -250,6 +264,8 @@
         
     </div>
 
-    
+  <!-- Scripts -->
+  <script src="app.js">
+  </script>
   </body>
 </html>

@@ -14,7 +14,7 @@ body {
       transparent 1px
     ),
     linear-gradient(to bottom, rgb(0, 36, 72) 1px, transparent 1px);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* ------------------------General------------------------- */
@@ -51,8 +51,16 @@ body {
 }
 #circle4 {
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  padding: 1rem 4rem 2rem 4rem;
+  /* background: forestgreen; */
+}
 .heading {
-  background: brown;
+  /* background: brown; */
 }
 .heading h1 {
   font-size: 4.5rem;
@@ -63,7 +71,12 @@ body {
   font-size: 1.5rem;
   color: aliceblue;
 }
-
+.maincontent {
+  background: darkblue;
+  text-align: center;
+  padding: 0.5rem;
+  color: rgb(234, 245, 255);
+}
 /* ------------------------Pages------------------------- */
 .home,
 .projects,
@@ -93,29 +106,14 @@ body {
   );
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
-  grid-template-rows: 50% 50%;
-  padding: 1rem 4rem 2rem 4rem;
-  background: forestgreen;
-}
-
 /* ------------------------About Page------------------------- */
 .aboutcontent {
   display: grid;
-  background: crimson;
+  /* background: crimson; */
   grid-template-columns: repeat(3, 32%);
   grid-template-rows: repeat(4, 25%);
   grid-gap: 0.5rem;
   padding: 1rem;
-}
-.progress {
-  background: darkblue;
-  text-align: center;
-  padding: 0.5rem;
-  color: rgb(234, 245, 255);
 }
 .on {
   height: 0.8rem;
@@ -148,13 +146,30 @@ body {
 /* ------------------------Projects Page------------------------- */
 .projectcontent {
   display: grid;
-  background: crimson;
+  /* background: crimson; */
   grid-template-columns: repeat(3, 32%);
   grid-template-rows: repeat(2, 50%);
   grid-gap: 0.5rem;
   padding: 1rem;
 }
-
+#showp1,
+#showp2,
+#showp3,
+#showp4,
+#showp5 {
+  background: forestgreen;
+}
+.hiddenp {
+  background: dodgerblue;
+  grid-template-columns: 50% 50%;
+}
+#hiddenp1,
+#hiddenp2,
+#hiddenp3,
+#hiddenp4,
+#hiddenp5 {
+  display: none;
+}
 /* ------------------------Media Queries------------------------- */
 
 @media screen and (max-width: 560px), screen and (max-height: 560px) {
@@ -167,7 +182,7 @@ body {
   }
   .container {
     grid-template-rows: 20% 20%;
-    grid-auto-rows: minmax(10% auto);
+    grid-template-rows: 20% 80%;
     padding: 1rem 2rem 2rem 2.5rem;
   }
   .heading h1 {
@@ -177,9 +192,15 @@ body {
     font-size: 1rem;
   }
   /* About Page */
-  .content {
+  .aboutcontent {
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(4, 25%);
+  }
+  .projectcontent {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 30%);
+    grid-gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
   }
 }
 
