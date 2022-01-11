@@ -107,7 +107,7 @@ body {
   background: rgba(0, 102, 204, 0.15);
   backdrop-filter: blur(2px);
   border: 2px rgb(149, 200, 255) dashed;
-  background: crimson;
+  /* background: crimson; */
   justify-content: center;
 }
 .about-content-heading,
@@ -170,6 +170,15 @@ body {
   border: 1px rgb(218, 236, 255) solid;
   display: inline-block;
 }
+.creativebutton {
+  width: 0;
+  height: 0;
+  margin: 1rem;
+  border-top: 1rem solid transparent;
+  border-left: 2rem solid rgb(3, 74, 145);
+  border-bottom: 1rem solid transparent;
+  display: inline-block;
+}
 
 /* ------------------------Projects Page------------------------- */
 .projectcontent {
@@ -182,7 +191,7 @@ body {
   backdrop-filter: blur(2px);
 
   border: 2px rgb(149, 200, 255) dashed;
-  background: crimson;
+  /* background: crimson; */
   /* justify-content: center; */
 }
 .bullets {
@@ -262,29 +271,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 15% 85%;
 }
-.creativecontainer {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  /* grid-template-rows: minmax(30%, 50%); */
-  padding: 1rem 4rem 2rem 4rem;
-  /* background: cornflowerblue; */
-}
 
-.creativecontent {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, 34%);
-  background: chartreuse;
-  grid-gap: 0.2rem;
-}
-.creativeimage {
-  display: grid;
-  background: darkblue;
-}
-.creativeimg {
-  width: 100%;
-  height: auto;
-}
 /* ------------------------Media Queries------------------------- */
 
 @media screen and (max-width: 560px), screen and (max-height: 560px) {
@@ -296,7 +283,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
     padding: 1rem 2rem 2rem 2rem;
-    background: crimson;
+    /* background: crimson; */
   }
 
   .heading {
@@ -338,8 +325,13 @@ body {
   #showp5 {
     font-size: 0.6rem;
   }
+  /* Contact Page */
+  .contact-container {
+    grid-template-rows: minmax(10%, 20%);
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  /* Creative Container */
 }
-
 /* Animations */
 @keyframes turn-on {
   30% {
