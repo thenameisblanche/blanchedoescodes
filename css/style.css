@@ -55,8 +55,16 @@ body {
 .container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: minmax(30%, 50%);
   padding: 1rem 4rem 2rem 4rem;
+  /* background: forestgreen; */
+}
+.container-full {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: minmax(30%, 50%); */
+  padding: 1rem 4rem 2rem 4rem;
+
   /* background: forestgreen; */
 }
 .heading {
@@ -105,15 +113,34 @@ body {
 .aboutcontent {
   display: grid;
   /* background: crimson; */
-  grid-template-columns: repeat(3, 32%);
-  grid-template-rows: repeat(2, 25%), 10%;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 15% repeat(2, 25%);
   grid-gap: 0.5rem;
   padding: 1rem;
+  background: rgba(0, 102, 204, 0.15);
+  backdrop-filter: blur(2px);
+  border: 2px rgb(149, 200, 255) dashed;
+  justify-content: center;
+}
+.about-content-heading,
+.about-content-heading h1 {
+  font-size: 2rem;
+  font-family: monospace;
+  color: rgb(211, 234, 255);
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 .logoimg {
-  width: 25%;
+  width: 40%;
   height: auto;
   /* background: blanchedalmond; */
+}
+.abouts {
+  background: rgba(0, 89, 177, 0.15);
+  backdrop-filter: blur(2px);
+  border: 2px rgb(149, 200, 255) dashed;
+  text-align: center;
+  padding: 0.5rem;
 }
 .creative {
   /* background: chartreuse; */
@@ -121,17 +148,12 @@ body {
   grid-column-start: 1;
   grid-column-end: 4;
 }
-.abouts {
-  background: darkblue;
-  text-align: center;
-  padding: 0.5rem;
-  color: rgb(234, 245, 255);
-}
 .on {
   height: 0.8rem;
   width: 0.8rem;
-  background: rgb(0, 79, 236);
+  background: rgb(34, 152, 255);
   display: inline-block;
+  border: 1px rgb(0, 117, 233) solid;
   border-radius: 50%;
 }
 #on-1 {
@@ -152,7 +174,8 @@ body {
 .off {
   height: 0.8rem;
   width: 0.8rem;
-  background: aliceblue;
+  background: rgb(185, 222, 255);
+  border: 1px rgb(218, 236, 255) solid;
   display: inline-block;
 }
 
@@ -160,11 +183,15 @@ body {
 .projectcontent {
   display: grid;
   /* background: crimson; */
-  grid-template-columns: repeat(5, 20%);
-  grid-template-rows: 60%;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-rows: 15% repeat(4, 30%);
   grid-gap: 0.5rem;
   padding: 1.5rem;
-  justify-content: center;
+  background: rgba(0, 102, 204, 0.15);
+  backdrop-filter: blur(2px);
+
+  border: 2px rgb(149, 200, 255) dashed;
+  /* justify-content: center; */
 }
 .bullets {
   line-height: 0.5rem;
@@ -175,17 +202,15 @@ body {
 #showp3,
 #showp4,
 #showp5 {
-  background: cyan;
   font-weight: bold;
   color: rgb(151, 206, 255);
+  background: rgba(0, 89, 177, 0.15);
+  backdrop-filter: blur(2px);
+  border: 2px rgb(149, 200, 255) dashed;
   padding: 0.5rem;
-  border: 0.2rem rgb(179, 219, 255) solid;
-  /* outline: 0.2rem aliceblue solid; */
-  /* outline-offset: -0.8rem; */
 }
 .hiddenp {
   background: dodgerblue;
-  grid-template-columns: 70% 30%;
   color: aliceblue;
   padding: 1rem;
 }
@@ -206,11 +231,9 @@ body {
 .contactcontent {
   display: grid;
   /* background: crimson; */
-  grid-template-columns: repeat(5, 15%);
-  /* justify-content: center; */
-
-  grid-gap: -3%;
-  /* padding: 1rem; */
+  grid-template-columns: repeat(5, 5%);
+  grid-template-rows: 25%;
+  grid-gap: 1rem;
 }
 
 .contacts {
