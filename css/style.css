@@ -64,16 +64,17 @@ body {
   grid-template-columns: 50% 50%;
   /* grid-template-rows: minmax(30%, 50%); */
   padding: 1rem 4rem 2rem 4rem;
-
-  /* background: forestgreen; */
 }
 .heading {
   /* background: brown; */
+  background: rgba(0, 123, 255, 0.054);
+  backdrop-filter: blur(2px);
 }
 .heading h1 {
   font-size: 4.5rem;
   color: aliceblue;
 }
+
 .subheading {
   font-family: monospace;
   font-size: 1.5rem;
@@ -210,7 +211,11 @@ body {
   padding: 0.5rem;
 }
 .hiddenp {
-  background: dodgerblue;
+  color: rgb(151, 206, 255);
+  background: rgba(0, 89, 177, 0.15);
+  backdrop-filter: blur(2px);
+  border: 2px rgb(149, 200, 255) dashed;
+  padding: 0.5rem;
   color: aliceblue;
   padding: 1rem;
 }
@@ -223,7 +228,7 @@ body {
 }
 
 .projectimg {
-  width: 10rem;
+  width: 80%;
   height: auto;
 }
 
