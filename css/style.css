@@ -132,7 +132,7 @@ body {
   grid-column-end: 4;
 }
 .logoimg {
-  width: 40%;
+  width: 48%;
   height: auto;
   /* background: blanchedalmond; */
 }
@@ -253,20 +253,20 @@ body {
 /* ------------------------Creative Page Page------------------------- */
 .creativecontainer {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
-  background: forestgreen;
-  padding: 1rem;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: minmax(30%, 50%); */
+  padding: 1rem 4rem 2rem 4rem;
 }
 .creativeheading {
   background: cornflowerblue;
 }
 .creativecontent {
-  background: chartreuse;
-  padding: 1rem;
+  /* background: chartreuse;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(20%, 50%)); */
 }
 .creativeimg {
-  height: 30%;
+  height: 3rem;
   width: auto;
 }
 /* ------------------------Media Queries------------------------- */
