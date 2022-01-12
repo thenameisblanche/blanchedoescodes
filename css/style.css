@@ -50,7 +50,6 @@ body {
 .general-container {
   display: grid;
   grid-template-columns: 40% 60%;
-  /* grid-template-rows: minmax(30%, 50%); */
   padding: 1rem 4rem 2rem 4rem;
 }
 .heading {
@@ -114,7 +113,7 @@ body {
 .about-content-heading h1 {
   font-size: 2rem;
   font-family: monospace;
-  color: rgb(211, 234, 255);
+  color: rgb(226, 241, 255);
   grid-column-start: 1;
   grid-column-end: 4;
 }
@@ -127,7 +126,7 @@ body {
 .abouts {
   background: rgba(0, 89, 177, 0.15);
   backdrop-filter: blur(2px);
-  border: 2px rgb(149, 200, 255) dashed;
+  border: 2px rgb(188, 221, 255) dashed;
   text-align: center;
   padding: 0.5rem;
 }
@@ -187,7 +186,7 @@ body {
   grid-template-rows: 15% repeat(4, 30%);
   grid-gap: 0.5rem;
   padding: 1.5rem;
-  background: rgba(0, 102, 204, 0.15);
+  background: rgba(0, 70, 140, 0.15);
   backdrop-filter: blur(2px);
 
   border: 2px rgb(149, 200, 255) dashed;
@@ -205,10 +204,17 @@ body {
 #showp5 {
   font-weight: bold;
   color: rgb(151, 206, 255);
-  background: rgba(0, 89, 177, 0.15);
+  background: rgba(0, 49, 98, 0.15);
   backdrop-filter: blur(2px);
-  border: 2px rgb(149, 200, 255) dashed;
+  border: 2px rgba(105, 177, 255, 0.972) dashed;
   padding: 0.5rem;
+}
+#showp1:hover,
+#showp2:hover,
+#showp3:hover,
+#showp4:hover,
+#showp5:hover {
+  background: rgba(27, 141, 255, 0.646);
 }
 .hiddenp {
   color: rgb(151, 206, 255);
@@ -216,6 +222,7 @@ body {
   backdrop-filter: blur(2px);
   border: 2px rgb(149, 200, 255) dashed;
   padding: 0.5rem;
+  /* background: crimson; */
   color: aliceblue;
   padding: 1rem;
 }
@@ -228,11 +235,11 @@ body {
 }
 
 .projectimg {
-  width: 60%;
+  width: 70%;
   height: auto;
 }
 
-/* ------------------------Contact Page Page------------------------- */
+/* ------------------------Contact Page------------------------- */
 .contact-container {
   display: grid;
   grid-template-columns: 100%;
@@ -275,9 +282,11 @@ body {
 /* ------------------------Media Queries------------------------- */
 
 @media screen and (max-width: 560px), screen and (max-height: 560px) {
-  .circnav,
   .nav {
     padding-left: 2rem;
+  }
+  .circnav {
+    padding: 0.5rem 2rem 0rem 2rem;
   }
   .general-container {
     grid-template-columns: 100%;
@@ -294,9 +303,7 @@ body {
     /* background: chartreuse; */
   }
   .subheading {
-    font-size: 0.5rem;
-
-    background: rgb(5, 2, 0);
+    font-size: 1rem;
   }
   /* About Page */
   .aboutcontent {
@@ -327,10 +334,110 @@ body {
   }
   /* Contact Page */
   .contact-container {
-    grid-template-rows: minmax(10%, 20%);
+    grid-template-rows: minmax(10%, 30%);
     padding: 1rem 2rem 2rem 2rem;
   }
-  /* Creative Container */
+  .contactlogo {
+    width: 200%;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .general-container {
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+  }
+  .heading h1 {
+    font-size: 3rem;
+  }
+  .subheading {
+    font-size: 1.5rem;
+  }
+  /* About Page */
+  .aboutcontent {
+    grid-template-rows: 15% repeat(2, 40%);
+  }
+  .about-content-heading h1 {
+    font-size: 1.5rem;
+  }
+  .logoimg {
+    width: 35%;
+  }
+  .on,
+  .off {
+    height: 0.4rem;
+    width: 0.4rem;
+  }
+  /* Projects Page */
+  .projectcontent {
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: 15% repeat(3, 30%);
+  }
+  #showp1,
+  #showp2,
+  #showp3,
+  #showp4,
+  #showp5 {
+    font-size: 0.6rem;
+  }
+  /* Contact Page */
+  .contact-container {
+    grid-template-rows: minmax(30%, 35%);
+    padding: 1rem 4rem 2rem 4rem;
+  }
+  .contactlogo {
+    width: 150%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .general-container {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    padding: 1rem 4rem 2rem 4rem;
+  }
+  .heading h1 {
+    font-size: 4.5rem;
+  }
+  .subheading {
+    font-size: 1.5rem;
+  }
+  /* About Page */
+  .aboutcontent {
+    grid-template-rows: 15% repeat(2, 30%);
+  }
+  .about-content-heading h1 {
+    font-size: 2rem;
+  }
+  .logoimg {
+    width: 45%;
+  }
+  .on,
+  .off {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+  /* Projects Page */
+  .projectcontent {
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: 15% repeat(4, 30%);
+  }
+  #showp1,
+  #showp2,
+  #showp3,
+  #showp4,
+  #showp5 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  /* Contact Page */
+  .contact-container {
+    grid-template-rows: minmax(30%, 50%);
+    padding: 1rem 4rem 2rem 4rem;
+  }
+  .contactlogo {
+    width: 100%;
+  }
 }
 /* Animations */
 @keyframes turn-on {
