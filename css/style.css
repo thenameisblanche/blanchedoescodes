@@ -254,11 +254,6 @@ body {
   grid-template-rows: 25%;
   grid-gap: 1rem;
 }
-
-.contacts {
-  /* background: cornflowerblue; */
-  /* text-align: center; */
-}
 .contactlogo {
   width: 100%;
   height: auto;
@@ -278,6 +273,16 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 15% 85%;
 }
+.creativecontainer {
+  background: firebrick;
+}
+.creativeheading {
+  background: dodgerblue;
+}
+.creative img {
+  width: 15%;
+  height: auto;
+}
 
 /* ------------------------Media Queries------------------------- */
 
@@ -295,9 +300,6 @@ body {
     /* background: crimson; */
   }
 
-  .heading {
-    /* background: coral; */
-  }
   .heading h1 {
     font-size: 2rem;
     /* background: chartreuse; */
